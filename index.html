@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김간호 | My Pink Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #59434f;
+    background: #fff7fa;
+}
+
+header {
+    background: rgba(255,255,255,.92);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 15px #e9b7cc33;
+}
+
+.logo {
+    font-family: 'Jua', sans-serif;
+    color: #e77ca7;
+    font-size: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #805e70;
+    margin-left: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+nav a:hover { color: #e77ca7; }
+
+section { padding: 75px 10%; }
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(135deg,#ffe2ee,#f9e8ff,#fff1f5);
+}
+
+.hero-text { max-width: 570px; }
+
+.hello {
+    display: inline-block;
+    background: white;
+    color: #df78a2;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Jua', sans-serif;
+    font-size: clamp(42px,6vw,68px);
+    line-height: 1.3;
+    color: #bd628c;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #76596b;
+}
+
+.hero-image {
+    width: 290px;
+    height: 340px;
+    border-radius: 48% 48% 30% 30%;
+    background: linear-gradient(145deg,#f7b8d1,#d9b8f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 115px;
+    box-shadow: 15px 18px 0 #ffffff88;
+    flex-shrink: 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 28px;
+    background: #e982ac;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+.button:hover { background: #c65e8c; transform: translateY(-3px); }
+
+.section-title {
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+    color: #c76d96;
+    font-size: 37px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #a78b9b;
+    margin-bottom: 40px;
+}
+
+.about-box {
+    background: white;
+    padding: 38px;
+    border-radius: 28px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    line-height: 2.1;
+    box-shadow: 0 10px 35px #e6b9cd33;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px #e6b9cd30;
+    transition: .3s;
+}
+.card:hover { transform: translateY(-8px); }
+
+.emoji { font-size: 48px; }
+
+.card h3 {
+    font-family: 'Jua', sans-serif;
+    color: #d5759d;
+    font-size: 23px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #856e7c;
+}
+
+.goal {
+    background: linear-gradient(135deg,#f5d6e7,#e9dafa);
+    text-align: center;
+}
+
+.goal-box {
+    max-width: 780px;
+    margin: auto;
+    background: #ffffffd9;
+    border-radius: 30px;
+    padding: 45px 30px;
+}
+
+.goal-box h2 {
+    font-family: 'Jua', sans-serif;
+    color: #c36a96;
+    font-size: 32px;
+}
+
+.goal-box p {
+    line-height: 2.1;
+    font-size: 16px;
+}
+
+.quote {
+    color: #d2759e;
+    font-family: 'Jua', sans-serif;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+footer {
+    text-align: center;
+    background: #f5dce8;
+    padding: 25px;
+    color: #98768a;
+    font-size: 13px;
+}
+
+@media(max-width:650px) {
+    nav { display: none; }
+    .hero { flex-direction: column; text-align: center; padding-top: 60px; }
+    .hero-image { width: 220px; height: 250px; font-size: 90px; }
+    section { padding: 60px 7%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">♡ KIM KANHO</div>
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#about">About Me</a>
+        <a href="#interests">Interests</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#goal">My Goal</a>
+    </nav>
+</header>
+
+<section class="hero" id="profile">
+    <div class="hero-text">
+        <span class="hello">♡ Hello! Nice to meet you ♡</span>
+        <h1>안녕하세요!<br>김간호입니다.</h1>
+        <p>
+            마음을 이해하고 기술로 소통하는<br>
+            미래의 간호사를 꿈꾸고 있습니다.<br>
+            따뜻한 공감과 끊임없는 배움으로<br>
+            세상에 긍정적인 변화를 만들겠습니다.
+        </p>
+        <a href="#about" class="button">저를 더 알아보기 ♡</a>
+    </div>
+    <div class="hero-image">🩷👩🏻‍⚕️</div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me ♡</h2>
+    <p class="subtitle">배움을 즐기고 사람과 함께 성장하는 사람</p>
+    <div class="about-box">
+        안녕하세요! 저는 <b>단국대학교 간호학과 2학년 김간호</b>입니다.<br>
+        새로운 것을 배우는 과정에서 즐거움을 찾고,<br>
+        다양한 사람들과 이야기하고 소통하는 것을 좋아합니다.<br>
+        작은 경험도 소중히 여기며 매일 조금씩 성장하려고 노력합니다.<br>
+        따뜻한 마음과 열린 생각으로 사람들에게 좋은 영향을 주는 사람이 되고 싶습니다.
+    </div>
+</section>
+
+<section id="interests" style="background:#fff0f6;">
+    <h2 class="section-title">My Interests ✨</h2>
+    <p class="subtitle">제가 관심을 가지고 즐겁게 탐구하는 분야</p>
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">🎬</div>
+            <h3>YouTube Shorts</h3>
+            <p>짧은 영상으로 재미와 정보를 전달하는 콘텐츠 제작에 관심이 많습니다.</p>
+        </div>
+        <div class="card">
+            <div class="emoji">💻</div>
+            <h3>Digital Technology</h3>
+            <p>새로운 디지털 기술을 배우고 일상과 간호 분야에 활용하는 것을 좋아합니다.</p>
+        </div>
+        <div class="card">
+            <div class="emoji">🩺</div>
+            <h3>Smart Nursing</h3>
+            <p>첨단 기술과 간호를 연결하여 더 나은 환자 중심 의료를 만드는 데 관심이 있습니다.</p>
+        </div>
+    </div>
+</section>
+
+<section id="strengths">
+    <h2 class="section-title">My Strengths 💗</h2>
+    <p class="subtitle">제가 가진 세 가지 소중한 강점</p>
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">🌷</div>
+            <h3>Responsibility</h3>
+            <p>맡은 일은 끝까지 책임지고 성실하게 해내려고 노력합니다.</p>
+        </div>
+        <div class="card">
+            <div class="emoji">🫶</div>
+            <h3>Empathy</h3>
+            <p>다른 사람의 입장에서 생각하고 마음을 이해하려고 노력합니다.</p>
+        </div>
+        <div class="card">
+            <div class="emoji">🤝</div>
+            <h3>Teamwork</h3>
+            <p>서로의 생각을 존중하며 함께 협력하고 좋은 결과를 만들어갑니다.</p>
+        </div>
+    </div>
+</section>
+
+<section id="hobbies" style="background:#fff0f6;">
+    <h2 class="section-title">My Hobbies 🌸</h2>
+    <p class="subtitle">일상에 행복과 에너지를 더해주는 시간</p>
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">🎧</div>
+            <h3>Music</h3>
+            <p>좋아하는 음악을 들으며 기분을 전환하고 힐링합니다.</p>
+        </div>
+        <div class="card">
+            <div class="emoji">✈️</div>
+            <h3>Travel</h3>
+            <p>새로운 장소를 여행하며 다양한 경험과 추억을 쌓습니다.</p>
+        </div>
+        <div class="card">
+            <div class="emoji">🏃‍♀️</div>
+            <h3>Exercise</h3>
+            <p>운동으로 건강을 관리하고 활기찬 에너지를 얻습니다.</p>
+        </div>
+    </div>
+</section>
+
+<section class="goal" id="goal">
+    <div class="goal-box">
+        <h2>My Goal 🌟</h2>
+        <p>
+            제가 꿈꾸는 간호사는 단순히 질병을 치료하는 데 도움을 주는 사람이 아니라,
+            환자의 마음까지 이해하고 진심으로 소통하는 사람입니다.<br><br>
+            디지털 기술을 능숙하게 활용하면서도 인간적인 따뜻함을 잃지 않고,
+            환자에게 신뢰와 희망을 주는 간호사로 성장하고 싶습니다.
+        </p>
+        <div class="quote">
+            "Technology with Heart,<br>
+            Care with Love." ♡
+        </div>
+    </div>
+</section>
+
+<footer>
+    Made with ♡ by Kim Kanho | Dankook University Nursing
+    <br>© 2026 My Personal Profile
+</footer>
+
+</body>
+</html>
